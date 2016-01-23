@@ -50,8 +50,8 @@ def testTTC():
     persons = (p1, p2, p3, p4)
     houses = (h1, h2, h3, h4)
     owner = {h1: p1,h2: p2, h3: p3, h4: p4}
-    preference = {p1: (h2, h1, h3, h4), p2: (h4, h3, h1, h2), p3: (h4, h1, h3, h2), p4: (h2, h1, h4, h3)}
+    preference = {p1: [h2, h1, h3, h4], p2: [h4, h3, h1, h2], p3: [h4, h1, h3, h2], p4: [h2, h1, h4, h3]}
 
     print TTC(persons, houses, owner, preference)
 
-# testTTC()
+testTTC()

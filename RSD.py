@@ -36,7 +36,7 @@ def testRSD():
 
     classes = (md, gt, m, i)
     economists = (L, T, N, K)
-    preferences ={L: (md, gt, m, i), T: (m, i, md, gt), N: (m, gt, i, md), K: (md, gt, i, m)}
+    preferences ={L: [md, gt, m, i], T: [m, i, md, gt], N: [m, gt, i, md], K: [md, gt, i, m]}
     statistics, class_assignments = RSD(economists, classes, preferences)
     print class_assignments[(L, T, N, K)]
     print statistics

@@ -75,7 +75,7 @@ def testTPL01():
     persons = (p1, p2, p3)
     houses = (h1, h2, h3)
     owner = {h1: p3}
-    preferences = {p1: (h1, h2, h3), p2: (h1, h3, h2), p3: (h2, h3, h1)}
+    preferences = {p1: [h1, h2, h3], p2: [h1, h3, h2], p3: [h2, h3, h1]}
 
     statistics_count, housing_assignments = TPL(persons, houses, owner, preferences)
 
@@ -100,7 +100,7 @@ def testTPL02():
     persons = (p1, p2, p3, p4)
     houses = (h1, h2, h3, h4)
     owner = {h3: p3}
-    preferences = {p1: (h2, h1, h3, h4), p2: (h2, h3, h1, h4), p3: (h1, h2, h3, h4), p4: (h3, h2, h1, h4)}
+    preferences = {p1: [h2, h1, h3, h4], p2: [h2, h3, h1, h4], p3: [h1, h2, h3, h4], p4: [h3, h2, h1, h4]}
     statistics_count, housing_assignments = TPL(persons, houses, owner, preferences)
 
     specific_case = housing_assignments[(p1, p2, p3, p4)]
@@ -125,7 +125,7 @@ def testTPL03():
     persons = (p1, p2, p3, p4)
     houses = (h1, h2, h3, h4)
     owner = {h1: p1,h2: p2, h3: p3, h4: p4}
-    preferences = {p1: (h2, h1, h3, h4), p2: (h4, h3, h1, h2), p3: (h4, h1, h3, h2), p4: (h2, h1, h4, h3)}
+    preferences = {p1: [h2, h1, h3, h4], p2: [h4, h3, h1, h2], p3: [h4, h1, h3, h2], p4: [h2, h1, h4, h3]}
     statistics_count, housing_assignments = TPL(persons, houses, owner, preferences)
 
     specific_case = housing_assignments[(p1, p2, p3, p4)]
@@ -150,7 +150,7 @@ def testTPL04():
     persons = (p1, p2, p3, p4)
     houses = (h1, h2, h3, h4)
     owner = {h3: p3}
-    preferences = {p1: (h2, h1, h3, h4), p2: (h2, h3, h1, h4), p3: (h3, h2, h1, h4), p4: (h3, h2, h1, h4)}
+    preferences = {p1: [h2, h1, h3, h4], p2: [h2, h3, h1, h4], p3: [h3, h2, h1, h4], p4: [h3, h2, h1, h4]}
     statistics_count, housing_assignments = TPL(persons, houses, owner, preferences)
 
     specific_case = housing_assignments[(p1, p2, p3, p4)]
